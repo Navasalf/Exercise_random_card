@@ -28,23 +28,20 @@ function randomcard() {
 let miboton = document.getElementById("mybutton")
 miboton.addEventListener("click",randomcard)
 
-setInterval(randomcard,10000)
 
+setInterval(randomcard,10000)
 
 
 const form = document.getElementById('Dimensiones');
 form.addEventListener('submit', function(event) {
   event.preventDefault();
 
-
   const alto = parseInt(document.getElementById('alto').value);
   const ancho = parseInt(document.getElementById('ancho').value);
 
- 
   const carta = document.getElementById('cartita');
   carta.style.height = `${alto}px`;
   carta.style.width = `${ancho}px`;
-
 
   form.reset();
 });
